@@ -1,0 +1,452 @@
+<!Doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://www.eprojet.fr/cours/css/style.css" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Parce que le savoir est un devoir. Nous vous accompagnons dans votre progression sur le Web. Formez-vous à votre rythme." />
+		<meta name="keywords" content="Eprojet - Tutoriels - Mooc - Web - Développement" />
+		<meta name="Robots" content="all" />
+		<link rel="shortcut icon" href="https://www.eprojet.fr/cours/imgsite/favicon.ico">
+		<title>
+		Eprojet : Html Css		</title>
+		<script type="text/javascript" src="https://www.eprojet.fr/cours/js/js.js"></script>
+		<script type="text/javascript" src="https://www.eprojet.fr/cours/editeur/colorationSyntaxique2/scripts/shCore.js"></script>
+		<script type="text/javascript" src="https://www.eprojet.fr/cours/editeur/colorationSyntaxique2/scripts/shBrushJScript.js"></script>
+		<script type="text/javascript" src="https://www.eprojet.fr/cours/editeur/colorationSyntaxique2/scripts/shBrushPhp.js"></script>
+		<script type="text/javascript" src="https://www.eprojet.fr/cours/editeur/colorationSyntaxique2/scripts/shBrushXml.js"></script>
+		<script type="text/javascript" src="https://www.eprojet.fr/cours/editeur/colorationSyntaxique2/scripts/shBrushCss.js"></script>
+		<script type="text/javascript" src="https://www.eprojet.fr/cours/editeur/colorationSyntaxique2/scripts/shBrushSql.js"></script>
+		<!-- <link type="text/css" rel="stylesheet" href="styles/shCoreDefault.css"/> -->
+		<link type="text/css" rel="Stylesheet" href="https://www.eprojet.fr/cours/editeur/colorationSyntaxique2/styles/shCoreRDark.css"/>
+		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+		<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+		<style>	body .syntaxhighlighter .line {		white-space: pre-wrap !important; /* make code wrap */	} .syntaxhighlighter{ padding: 10px !important;  width: 97% !important;	}
+		</style>
+	</head>
+	<body>
+		<header>
+			
+		<nav class="haut-bas"> <!-- proposer barre de menu fixed!! -->
+				<div class="menuNormal">
+					<ul>
+						<li><a href="https://www.eprojet.fr/cours/index.php" class="home" title="eprojet.fr"><img src="https://www.eprojet.fr/cours/imgsite/logo2.png" width="40px"></a></li>				
+						<li><a href="https://www.eprojet.fr/cours/html_css/01-html_css-introduction-html-css" title="intégration Html / Css" class="lien1 active">Html / Css</a></li>
+						<li><a href="https://www.eprojet.fr/cours/responsive_design/01-responsive_design-le-responsive-design" title="intégration Responsive Design" class="lien2">Responsive Design</a></li>
+						<li><a href="https://www.eprojet.fr/cours/bootstrap/01-bootstrap-framework-bootstrap" title="intégration Bootstrap" class="lien3">Bootstrap</a></li>
+						<li><a href="https://www.eprojet.fr/cours/newsletter_emailing/01-newsletter_emailing-les-newsletter-emailing" title="intégration Newsletter" class="lien4">Newsletter</a></li>
+						
+						<li><a href="https://www.eprojet.fr/cours/sql/01-sql-base-de-donnees" title="développement Sql" class="lien5">Sql</a></li>
+						<li><a href="https://www.eprojet.fr/cours/php/01-php-intro-php" title="développement Php" class="lien6">Php</a></li>
+						
+						<li><a href="https://www.eprojet.fr/cours/wordpress/01-wordpress-installation-et-configuration-de-wordpress" title="cms Wordpress" class="lien7">Wordpress</a></li>
+						<li><a href="https://www.eprojet.fr/cours/drupal/01-drupal-installation-et-configuration" title="cms Drupal" class="lien8">Drupal</a></li>						
+						
+						<li><a href="https://www.eprojet.fr/cours/cahier_des_charges_devis/01-cahier_des_charges_devis-rediger-un-cahier-des-charges" title="Cahiers des charges" class="lien9">Cahier des Charges</a></li>
+						<li><a href="https://www.eprojet.fr/cours/cahier_des_charges_devis/02-cahier_des_charges_devis-etablir-un-devis" title="Devis et modele de devis" class="lien10">Devis</a></li>
+						<li><a href="https://www.eprojet.fr/cours/wamp/01-wamp-configuration-de-wamp" title="Wamp" class="lien11">Wamp</a></li>
+						
+						<li><a href="https://www.eprojet.fr/cours/travail/01-travail-statut-independant,-freelance,-auto-entrepreneur,-portage-ou-societe" title="statut : indépendant ou salarié ?" class="lien12">Statut</a></li>
+						<li><a href="https://www.eprojet.fr/cours/travail/02-travail-construire-son-cv-pour-taper-dans-l-oeil-du-recruteur" title="CV" class="lien13">CV</a></li>
+						<li><a href="https://www.eprojet.fr/cours/culture_web/01-culture_web-culture-web" title="CultureWeb" class="lien13">Culture Web</a></li>
+					</ul>
+				</div>
+				<div class="menuResponsive">
+						<ul class="niveau1">
+							<li class="sousmenu sousmenu1 autre-sujet"><a href="#" class="lien-autre-sujet"><span class="mot-cache">Autres</span> sujets <img src="https://www.eprojet.fr/cours/img/fleche-blanche-bas.png" style="float: right; margin: 21.5px 0 0 3px;"></a>
+								<ul class="niveau2">									
+									<li><a href="https://www.eprojet.fr/cours/html_css/01-html_css-introduction-html-css" title="intégration Html / Css" class="lien1 active">Html / Css</a></li>
+									<li><a href="https://www.eprojet.fr/cours/responsive_design/01-responsive_design-le-responsive-design" title="intégration Responsive Design" class="lien2">Responsive D.</a></li>
+									<li><a href="https://www.eprojet.fr/cours/bootstrap/01-bootstrap-framework-bootstrap" title="intégration Bootstrap" class="lien3">Bootstrap</a></li>
+									<li><a href="https://www.eprojet.fr/cours/newsletter_emailing/01-newsletter_emailing-les-newsletter-emailing" title="intégration Newsletter" class="lien4">Newsletter</a></li>
+									
+									<li><a href="https://www.eprojet.fr/cours/sql/01-sql-base-de-donnees" title="développement Sql" class="lien5">Sql</a></li>
+									<li><a href="https://www.eprojet.fr/cours/php/01-php-intro-php" title="développement Php" class="lien6">Php</a></li>
+									
+									<li><a href="https://www.eprojet.fr/cours/wordpress/01-wordpress-installation-et-configuration-de-wordpress" title="cms Wordpress" class="lien7">Wordpress</a></li>
+									<li><a href="https://www.eprojet.fr/cours/drupal/01-drupal-installation-et-configuration" title="cms Drupal" class="lien8">Drupal</a></li>						
+									
+									<li><a href="https://www.eprojet.fr/cours/cahier_des_charges_devis/01-cahier_des_charges_devis-rediger-un-cahier-des-charges" title="Cahiers des charges" class="lien9">Cahier des Charges</a></li>
+									<li><a href="https://www.eprojet.fr/cours/cahier_des_charges_devis/02-cahier_des_charges_devis-etablir-un-devis" title="Devis et modele de devis" class="lien10">Devis</a></li>
+									<li><a href="https://www.eprojet.fr/cours/wamp/01-wamp-configuration-de-wamp" title="Wamp" class="lien11">Wamp</a></li>
+									
+									<li><a href="https://www.eprojet.fr/cours/travail/01-travail-statut-independant,-freelance,-auto-entrepreneur,-portage-ou-societe" title="statut : indépendant ou salarié ?" class="lien12">Statut</a></li>
+									<li><a href="https://www.eprojet.fr/cours/travail/02-travail-construire-son-cv-pour-taper-dans-l-oeil-du-recruteur" title="CV" class="lien13">CV</a></li>
+									<li><a href="https://www.eprojet.fr/cours/culture_web/01-culture_web-culture-web" title="CultureWeb" class="lien13">Culture Web</a></li>
+								</ul>
+							</li>
+						</ul>
+				</div>
+				<div class="clear"></div>
+		</nav>
+		</header>	<section>		
+		<div class="conteneur">
+					<div class="colonne-gauche">
+				<script>sommaireAutomatique(2); var sujet = 'html_css' ;</script><h1> Structure D'une Page Html</h1><div id="sommaire">	</div><div class="pdf"><a title="Voir au format PDF" target="blank" href="https://www.eprojet.fr/cours/pdf/html-css-support.pdf"><img src="https://www.eprojet.fr/cours/imgsite/pdf.png">Voir au format PDF</a></div>	<div id="informations">
+		<div id="fil-arianne">Vous êtes ici : >> <a href="https://www.eprojet.fr/cours/html-css/02-html_css-structure-d--une-page-html">HTML-CSS /  Structure D'une Page Html</a></div>
+		<div id="temps-niveau"><img src="https://www.eprojet.fr/cours/img/horloge.png" class="imageprez"> <span class="texteprez texteprez2">Temps d'étude : 30 min.</span> <img src="https://www.eprojet.fr/cours/img/niveauFacile.png" class="imageprez"> <span class="texteprez">Niveau : Facile.</span></div><div class="clear"></div>
+		<div id="tags">Tags : Apprendre à créer son site web. <em> Structure D'une Page Html</em></div>
+		<div id="fichiers">Fichier(s) utile(s) pour ce cours : <img src="https://www.eprojet.fr/cours/img/icone-fichier.png" class="icone-fichier"><a href="https://www.eprojet.fr/cours/code/structure.html" target="blank" download>structure.html</a><br></div>
+		<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
+	
+	
+<h2>Qu'est-ce qu'un langage ?</h2>
+<p>
+	Un langage c'est comme une langue, si vous partez en vacances et que voulez vous faire comprendre en Espagne il faudra apprendre et parler Espagnol !<br>
+	Et bien, si vous souhaitez créer un site web il faudra apprendre et parler html / css. (à la différence que ce sera une langue écrite uniquement)
+</p>
+
+	
+<h2>Qu'est-ce qu'un code ?</h2>
+Un code est un morceau de texte suivant des normes et les conventions d'un langage, introduit à l'intérieur d'un fichier possédant l'extension du langage <em>(exemple : .html, .css, etc.)</em>.<br><br>
+l'ensemble de ces lignes de code sont exécutées et lues <em>(par un navigateur ou l'interpréteur d'un serveur)</em> et permettent d'obtenir un affichage en retour.<br><br>
+
+	
+<h2>Qu'est-ce qu'une balise ?</h2>
+Une balise est un mot entre chevron, par exemple : <pre class="brush: php; html-script: true; gutter: false;"><mabalise> </mabalise></pre><br><br>
+
+	
+La balise permettant de contenir des paragraphes s'ouvre avec : <pre class="brush: php; html-script: true; gutter: false;"> <p> </pre><br>
+Cette même balise se ferme avec : <code><xmp> </p> </xmp></code><br>
+
+Certaines balises sont auto-fermantes (elles ne se ferment pas), par exemple : <pre class="brush: php; html-script: true; gutter: false;">&lt;mabaliseautofermante&gt;</pre><br>
+Parmis les balises autofermantes nous pouvons noter les suivantes : &lt;br&gt; , &lt;hr&gt; , &lt;img&gt; ,  &lt;meta&gt; ,  &lt;input&gt; , &lt;link&gt; ...<br><br>
+
+<h3>Qu'est-ce qu'un chevron ?</h3>
+Un chevron ouvrant c'est ce caractère : &lt;<br>
+Un chevron fermant c'est ce caractère : &gt;<br>
+
+	
+<h2>Qu'est-ce qu'un attribut ?</h2>
+		Un attribut est un mot complémentaire venant se glisser à l'intérieur d'une balise.<br><br>
+		Exemple avec l'attribut charset :<br><br>
+		<pre class="brush: php; html-script: true; gutter: false;">
+			&lt;meta charset="utf-8"&gt;
+		</pre>
+		La balise <strong>Meta</strong>, peut servir à plusieurs utilisations...<br>
+		Nous lui ajoutons donc l'attribut <strong>charset</strong> pour préciser que nous souhaitons régler l'encodage des caractères sur UTF-8 <em>(attention il faudra que votre éditeur soit également réglé sur UTF-8 sans bom)</em>.<br><br><br>
+		Un autre exemple avec l'attribut content :<br><br>
+		<pre class="brush: php; html-script: true; gutter: false;">
+			<meta name="description" content="la description du site web" />
+		</pre>
+		Comme la balise <strong>Meta</strong> peut servir dans plusieurs situations, nous lui ajoutons donc l'attribut <strong>description</strong> pour préciser que nous souhaitons ajouter une description qui soit prise en compte par Google et les autres moteurs de recherche.<br><br>
+		L'attribut description de la balise meta permettra de fournir à Google (et aux autres moteurs de recherche) une description.<br><br>
+		<img src="https://www.eprojet.fr/cours/img/htmlcss1.jpg" alt="explications Html / Css"><br><br>		
+	
+<h2>Qu'est-ce qu'une valeur ?</h2>
+		Une valeur est un mot ou un ensemble de mots venant renseigner un attribut.<br><br>
+		Dans notre code ci-dessus, les balises apparaissent en bleu, les attributs en blanc, les valeurs en vert. Exemple : <br><br>
+		<pre class="brush: php; html-script: true; gutter: false;">
+				&lt;link rel="stylesheet" href="structure.css"&gt;
+		</pre>
+		Une valeur est un morceau de texte saisi dans les guillemets d'un attribut. comme ici avec le nom de notre feuille de style css : <strong>structure.css</strong>.<br><br>
+		
+		Cette ligne nous permettra plus tard de lier le fichier Html au fichier Css.<br><br>
+	
+
+	<h2>Qu'est-ce qu'un commentaire ?</h2>
+	Un commentaire est une portion de texte (souvent une note ou une indication) ignorée par l'interpréteur, exemple :<br><br>
+	<pre class="brush: php; html-script: true; gutter: false;">
+		<p> <!-- j'ouvre la balise -->
+			Mon Texte <!-- j'appuie sur la touche tabulation de mon clavier pour me déplacer à l'intérieur et y saisir un texte -->
+		</p><!-- je ferme la balise -->
+	</pre>
+	Les commentaires sont des morceaux de texte ignorés par le navigateur, c'est en quelque sorte des annotations que l'on peut ajouter pour y voir plus clair et se repérer plus rapidement dans un code-source.<br><br>
+	Les commentaires sont également très pratiques lors d'un travail d'équipe de manière à ce qu'un nouveau développeur arrivant sur un projet comprenne rapidement avec quelques indications le travail ayant été réalisé.<br><br>
+	
+	
+	
+	<h2>Qu'est-ce que l'indentation ?</h2>
+	L'indentation consiste à se décaler (du bord gauche) vers la droite pour indiquer que l'information se trouve à l'intérieur.<br><br>
+	<pre class="brush: php; html-script: true; gutter: false;">
+		<p>
+			Mon Texte
+		</p>
+	</pre>
+	Dans notre cas « Mon Texte » se trouve à l'intérieur des balises &lt;p&gt; et &lt;/p&gt;.<br><br>
+	Il est important de respecter cette méthodologie en entreprise (pour soi, mais aussi lorsque l'on collabore avec plusieurs personnes).<br><br>
+	Si vous ne voyez pas l'intérêt de l'indentation, posez-vous cette question : aimeriez-vous que l'on vous partage 200 lignes de code totalement dé-indentées et quasi illisibles ?<br><br>
+	Même si cela n'est pas obligatoire pour rendre un code personnel fonctionnel, cela reste hautement recommandé pour améliorer la lecture.<br><br>
+	
+	
+<h2>Débuter et créer une première page en Html</h2>
+<p>
+	Nous allons créer un premier fichier par l'intermédiaire de notepad++.<br><br>
+	Nous nommerons ce fichier : <img src="https://www.eprojet.fr/cours/img/icone-fichier.png" class="icone-fichier"> <strong>mapage.html</strong><br><br>
+	
+	<div class="rappel"><div class="rap"></div><span class="gras"><img src="https://www.eprojet.fr/cours/img/fleche.png" class="icone-fleche" alt="fléche" class="marginRight10"> Informations sur le nommage des fichiers</span><br>Les noms de fichiers en informatique ne comportent ni d'espace, ni accent.</div><br><br>
+	 
+	Voici le contenu à introduire dans votre fichier :<br><br>
+		<div class="entete-code">mapage.html</div>
+		<pre class="brush: php; html-script: true; gutter: false;">
+		&lt;!Doctype html&gt;
+		&lt;html&gt;
+			&lt;head&gt;
+				&lt;meta charset="utf-8"&gt;
+				&lt;title&gt;Ma Page&lt;/title&gt;
+			&lt;/head&gt;
+			&lt;body&gt;
+			
+				&lt;h1&gt;Mon premier Titre !&lt;/h1&gt;
+				&lt;p&gt;Et mon premier paragraphe de texte qui l'accompagne !!&lt;/p&gt;
+				
+			&lt;/body&gt;
+		&lt;/html&gt;
+		</pre><br><br>
+	
+	N'oubliez pas d'enregistrer en sauvegardant votre fichier : <br><br>
+	<img src="https://www.eprojet.fr/cours/img/htmlcss203.jpg"><br><br>
+		
+	
+	Décryptons ensemble les données saisies :<br><br>
+	<ul>
+	<li><strong>Doctype</strong> est une balise obligatoire en début de document et cela peut aussi permettre de préciser son type ainsi que la version du langage Html utilisée. C'est également indispensable pour valider son code source auprès de l'organisation W3C.</li><br>
+	<li><strong>Html</strong> est également une balise indispensable, elle doit être présente dans tous vos documents pour englober le code de vos pages web.</li><br>
+	<li><strong>Head</strong> définie les entêtes de votre document, c'est une partie non visible mais nécessaire pour plusieurs raisons. Par exemple, nous pourrons définir un titre de page, se lier avec une feuille de style css ou encore préciser la description de notre site web.</li><br>
+	<li><strong>Title</strong> permet de donner un titre à votre page, c'est ce que vous verrez apparaitre sur l'onglet de votre navigateur</li><br>
+	<li><strong>body</strong> définit, cette fois, le corps de votre document, c'est la partie visible de votre page web, c'est à cet endroit que nous mettrons du texte, des images, et toute autre information.</li><br>
+	<li><strong>h1</strong> est une balise qui permet de déterminer le titre du document (en général, nous ne mettons qu'un seul titre par page, par convention liée au référencement).</li><br>
+	<li><strong>p</strong> est une balise qui permet de créer un paragraphe de texte du document (nous pouvons en mettre autant qu'on le souhaite !).</li><br>
+	</ul>
+	
+	
+
+<h2>Encodage des caractères</h2>
+<p>
+	Les fichiers créés sous notepad doivent posséder l'encodage utf-8 sans bom : <br><br>
+	<img src="https://www.eprojet.fr/cours/img/htmlcss164.jpg" alt="explications Html / Css"><br><br>
+	
+	Vous devrez ajouter la balise suivante dans la partie <code>&lt;head&gt;</code> pour éviter des problèmes d'encodage :<br><br>
+	<pre class="brush: php; html-script: true; gutter: false;">
+		&lt;meta charset="utf-8"&gt;
+	</pre>
+</p>
+
+
+	
+	
+<h2>Structure d'une page web ! Le code Html</h2>
+<p>
+	Nous allons créer un nouveau dossier (sans espace, sans accent) nommé : <img src="https://www.eprojet.fr/cours/img/icone-dossier.png" class="icone-dossier"> <strong>/HtmlCss/</strong><br>
+	A l'intérieur du dossier /HtmlCss/, nous allons créer un nouveau dossier nommé : <img src="https://www.eprojet.fr/cours/img/icone-dossier.png" class="icone-dossier"> <strong>/Structure/</strong><br>
+	Nous allons étudier le code source d'une page web standard<br><br>
+	Pour cela, créer un fichier nommé : <img src="https://www.eprojet.fr/cours/img/icone-fichier.png" class="icone-fichier">  <strong>structure.html</strong><br><br>
+	<img src="https://www.eprojet.fr/cours/img/htmlcss8.jpg" alt="explications Html / Css"><br><br>
+	Nous travaillerons donc sur le fichier et le chemin suivant : <strong>/HtmlCss/Structure/structure.html</strong><br><br>
+		<div class="entete-code">structure.html</div>
+		<pre class="brush: php; html-script: true; gutter: false;">
+		&lt;!Doctype html&gt;
+		&lt;html&gt;
+			&lt;head&gt;
+				&lt;title&gt;Ma Page&lt;/title&gt;
+				&lt;link rel="stylesheet" href="structure.css"&gt;
+				&lt;meta charset="utf-8"&gt;
+				&lt;meta name="keywords" content="motclé1 motclé2"&gt;
+				&lt;meta name="description" content="la description du site web"&gt;
+				&lt;meta name="author" content="Nom Prenom"&gt;
+			&lt;/head&gt;
+			&lt;body&gt;
+			
+				&lt;header&gt;
+					
+				&lt;/header&gt;
+				
+				&lt;nav&gt;
+					
+				&lt;/nav&gt;
+				
+				&lt;section&gt;
+					&lt;div&gt;
+						&lt;span&gt;
+						
+						&lt;/span&gt;
+					&lt;/div&gt;
+				&lt;/section&gt;
+				
+				&lt;article&gt;
+					
+				&lt;/article&gt;
+				
+				&lt;footer&gt;
+				
+				&lt;/footer&gt;
+				
+			&lt;/body&gt;
+		&lt;/html&gt;
+		</pre>
+		<i> Comme vous pouvez le constater, l'indentation a été respectée</i><br><br>
+		Décryptons ensemble les données saisies :<br><br>
+		<ul>
+		<li><strong>Doctype</strong> est une balise obligatoire pour déclarer un document et pour plus tard valider son code sur W3C.</li><br>
+		<li><strong>Html</strong> est également une balise indispensable, elle doit être présente dans tous vos documents pour englober le code de vos pages web.</li><br>
+		<li><strong>Head</strong> définit les entêtes de votre document, c'est une partie non visible mais nécessaire pour plusieurs raisons. Par exemple, nous pourrons définir un titre de page, se lier avec une feuille de style css ou encore préciser la description de notre site web.</li><br>
+		<li><strong>Title</strong> permet de donner un titre à votre page, c'est ce que vous verrez apparaitre sur l'onglet de votre navigateur</li><br>
+		<li><strong>Link</strong> permet de me relier à une feuille de style css (je pourrais écrire du code css à l'intérieur pour mettre en forme ma page web)</li><br>
+		<li><strong>Meta</strong> permet de donner des informations sur son site web comme l'encodage utilisé, une liste de mots clés décrivant votre site web, l'auteur du site, une description (la description est utilisée par Google, c'est ce qu'on peux apercevoir sous l'adresse url d'un site web dans le moteur de recherche).<br> <u>Meta description</u> :<br>
+		<img src="https://www.eprojet.fr/cours/img/htmlcss1.jpg" alt="explications Html / Css"><br><br>
+		<li><strong>Body</strong> définit le corps de votre document, c'est la partie visible de votre page web, c'est à cet endroit que nous mettrons du texte, des images, et toute autre information.</li><br>
+		<li><strong>Header</strong> est une balise permettant de prévoir un emplacement (ou une zone) pour le haut de votre site web. En général, nous y retrouvons un logo, un slogan ...</li><br>
+		<li><strong>Nav</strong> est une balise permettant de prévoir un emplacement (ou une zone) pour votre menu de navigation. En général, nous y retrouvons des liens.</li><br>
+		<li><strong>Section</strong> est une balise permettant de prévoir un emplacement (ou une zone) pour le contenu de votre site web. Nous y retrouverons plutôt un titre, du texte, des images, etc.</li><br>
+		<li><strong>Div</strong> est une balise permettant de prévoir un emplacement (ou une zone) quelconque de votre site web. L’élément div peut regrouper tout et n’importe quoi, alors que l’élément section a plutôt été pensé pour regrouper du contenu apparenté.</li><br>
+		<li><strong>Span</strong> est une balise permettant de prévoir un petit emplacement secondaire, on l'utilise souvent à l'intérieur d'une autre zone. L’élément span peut regrouper tout et n’importe quoi, il s'agit d'une zone secondaire d'information</li><br>
+		<li><strong>Article</strong> est une balise permettant de prévoir une zone de texte.</li><br>
+		<li><strong>Footer</strong> est une balise permettant de prévoir un emplacement (ou une zone) pour le bas de votre site web. En général, nous y retrouvons des liens administratifs (type: mentions légales, plan du site, Conditions Générales, etc), un copyright, etc.</li><br>
+		</ul>
+		Voici ce que ces balises pourraient donner lors d'un affichage : <br><br>
+		<img src="https://www.eprojet.fr/cours/img/htmlcss2.png" alt="explications Html / Css">		<br><br>
+
+		
+		<div class="asavoir"><div class="ampoule"></div><span class="gras"><img src="https://www.eprojet.fr/cours/img/fleche.png" class="icone-fleche" alt="fléche" class="marginRight10"> Bon à savoir</span><br>Lorsque l'on clique sur l'une de nos balises dans notepad++, les balises passent en surbrillance ce qui prouve qu'elles sont bien ouvertes et bien fermées, c'est un réflexe à prendre pour être sûr d'avoir un code-source et une sémantique de qualité.</div><br><br>
+
+		<img src="https://www.eprojet.fr/cours/img/htmlcss2.jpg" alt="explications Html / Css"><br><br>
+		L'ordre de saisie des balises determine l'ordre d'affichage.<br><br>
+</p>
+
+	
+	
+<h2>Assurer la liaison entre une page html et une feuille de style css</h2>
+<p>
+	Il n'est pas courant d'écrire un fichier Html sans se lier à une feuille de style Css.<br><br>
+	Le code Html détermine la structure de la page (incluant les différentes zones), mais nous devons également écrire du code CSS pour positionner ces zones sur la page, leur donner des tailles, des couleurs, etc.<br><br>
+	Reprenons les 2 fichiers précédents : <img src="https://www.eprojet.fr/cours/img/icone-fichier.png" class="icone-fichier"> <strong>structure.html</strong> et <img src="https://www.eprojet.fr/cours/img/icone-fichier.png" class="icone-fichier"> <strong>structure.css</strong><br>
+	<em>Nous attribuons le même nom aux 2 fichiers toutefois les fichiers pourraient se nommer différement</em><br><br>
+	Cette ligne (à placer dans le code HTML) vous permettra d'assurer la liaison avec votre feuille de style (fichier css) : <br>
+	<pre class="brush: php; html-script: true; gutter: false;">
+		&lt;link rel="stylesheet" href="structure.css"&gt;
+	</pre>
+	<h3>Comment être sûr d'être correctement relié à votre feuille de style ?</h3>
+	Et bien, si vous écrivez du code CSS de mise en forme et que vous ne voyez pas votre style sur votre page html, c'est sans doute qu'il y a un problème dans le code ou dans le chemin qui relie les deux fichiers.<br><br>
+	Vous pouvez aussi effectuer un clic droit > code source de la page (<span class="clavier">ctrl + u</span> au clavier) et cliquer sur le chemin du fichier « .css » qui est affiché.<br><br>
+	<img src="https://www.eprojet.fr/cours/img/htmlcss11.jpg" alt="explications Html / Css"><br><br>
+	Lorsque vous cliquerez dessus, deux résultats sont possibles :<br><br>
+	<img src="https://www.eprojet.fr/cours/img/fleche.png" class="icone-fleche" alt="fléche"> 1. Soit, vous pouvez observer votre code CSS apparaitre et vous savez que votre fichier est bien relié.<br>
+	Si un problème persiste, cela sera certainement lié au code en lui-même mais pas à la liaison entre les fichiers. Pensez à relire le code html tout comme le code css, vérifiez que vos deux fichiers soient bien enregistrés et que la liaison entre html et css soit bien établie (cela peut aussi être une erreur de chemin de fichier).<br><br>
+	<img src="https://www.eprojet.fr/cours/img/fleche.png" class="icone-fleche" alt="fléche"> 2. Soit, une page d'erreur s'affiche : <br>
+	<img src="https://www.eprojet.fr/cours/img/htmlcss12.jpg" alt="explications Html / Css"><br><br>
+	Sur un site web static, généralement une seule feuille de style est utilisée.<br><br>
+	Un seul code Html peut être personnalisé différemment selon les feuilles de style, voici l'exemple du <a href="https://www.csszengarden.com/" target="blank">zen garden</a>.<br>
+	Vous pourrez afficher le site du zen garden sous différentes couleurs et présentations, le code Html est toujours le même.<br><br>
+</p>
+
+<h2>Comment voir votre page web et observer le rendu à l'écran dans le navigateur ?</h2>
+<p>
+	Pour observer le rendu de votre page web à l'écran, il faut se rendre dans votre éditeur sur la partie exécution > Lancer avec Firefox (par exemple).<br><br>
+	<img src="https://www.eprojet.fr/cours/img/htmlcss4.jpg" alt="explications Html / Css"><br><br>
+	Un autre moyen consiste à aller sur l'emplacement de votre fichier pour effectuer un double clic gauche ou un clic droit > ouvrir avec > firefox (ou un autre navigateur).<br><br>
+	<img src="https://www.eprojet.fr/cours/img/htmlcss5.jpg" alt="explications Html / Css"><br><br>
+	<div class="resultat">
+		<strong>Le Résultat</strong><br>
+		<img src="https://www.eprojet.fr/cours/img/htmlcss3.jpg" alt="explications Html / Css"><br><br>
+	</div><br><br>
+	<div class="rappel"><div class="rap"></div><span class="gras"><img src="https://www.eprojet.fr/cours/img/fleche.png" class="icone-fleche" alt="fléche" class="marginRight10"> Question</span><br>J'ai une page blanche à l'écran, avec presque rien !!! c'est normal ?</div><br><br>
+	Oui, rassurez-vous, c'est tout à fait normal :p ! nous n'avons pas encore écrit le code CSS. <br> Les emplacements et les zones sont bien déclarés mais il faut ajouter une mise en forme afin de les voir apparaitre.<br><br>
+	
+	<div class="asavoir"><div class="ampoule"></div><span class="gras"><img src="https://www.eprojet.fr/cours/img/fleche.png" class="icone-fleche" alt="fléche" class="marginRight10"> Bon à savoir</span><br>Le Html fonctionne la plupart du temps avec le Css. La combinaison de ces deux langages nous permettent de construire des pages web.</div><br><br>
+	N'oubliez pas d'actualiser votre navigateur (<span class="clavier">f5</span> ou <span class="clavier">ctrl + r</span>) pour rafraichir votre page.<br>
+</p>
+
+<h2>Observer le code-source de la page pour trouver ses erreurs</h2>
+<p>
+	Avant d'aller plus loin, vous pouvez observer le code-source de la page, vous pouvez effectuer un clic droit > code source de la page dans votre navigateur.<br><br>
+	Ou directement avec le racourci, au clavier : <span class="clavier">ctrl + u</span>.<br><br>
+	Regarder votre code-source est très utile, s'il y a une erreur de sémantique, celle-ci apparait généralement en rouge.<br><br>
+	Exemple dans le code source : <br><br>
+	<img src="https://www.eprojet.fr/cours/img/htmlcss6.jpg" alt="explications Html / Css"><br><br>
+	Nous pouvons constater que la balise body apparait en rouge et que par conséquent il y a une erreur sur cette ligne !<br><br>
+	Exemple dans l'éditeur :<br><br>
+	<img src="https://www.eprojet.fr/cours/img/htmlcss7.jpg" alt="explications Html / Css"><br><br>
+	Un autre indicateur d'erreur : <strong>La coloration syntaxique.</strong><br><br>
+	Sous notepad les balises apparaissent en bleu, les attributs en rouge, les valeurs en violet. Si les couleurs ne sont pas bonnes, cela peut être révélateur d'une erreur dans le code.<br><br>
+	Nous voyons que la balise <i>header</i> n'a pas sa couleur habituelle, c'est donc qu'une erreur a été faite avant la ligne n°12.<br><br>
+	Vous avez trouver l'erreur ? et oui, il s'agit du chevron fermant sur la balise body !<br><br>
+	D'une manière générale, pensez donc à toujours vérifier votre code-source pour voir si rien n'apparait en rouge avant d'aller plus loin.<br><br>
+</p>
+
+
+<h2>Validons notre code-source avec le W3C</h2>
+<p>
+	Pour cela, il faut se rendre sur Google et saisir : w3c validator.<br><br>
+	Nous avons 3 types de validation possibles :<br><br>
+	<ul>
+		<li>Par l'url</li>
+		<li>Par un upload de fichier</li>
+		<li>Par une saisie (copier/coller)</li>
+	</ul><br><br>
+	Etant donné que notre site n'est pas en ligne, nous allons éliminer le 1er choix et je vous propose de copier/coller votre code dans le 3e onglet, comme ceci :<br><br>
+	<img src="https://www.eprojet.fr/cours/img/htmlcss14.jpg" alt="explications Html / Css"><br><br>
+	Excellente nouvelle ! Notre document est valide et conforme et aucune erreur n'est relevée !<br><br>
+	<img src="https://www.eprojet.fr/cours/img/htmlcss15.jpg" alt="explications Html / Css"><br><br>
+</p>
+
+<h2>Comment créer une page d'accueil ?</h2>
+<p>
+	Lorsqu'on crée un site web, c'est pour le mettre en ligne (sur le web) à terme.<br><br>
+	En effet, si votre site web reste en local sur votre ordinateur, il risque de ne pas servir énormément puisque personne ne le verra à par vous même !<br><br>
+	Lorsque l'on crée un site web, il y a toujours une page d'Accueil (Home Page, page par défaut), pour cela nous créons un fichier qui se nomme : <img src="https://www.eprojet.fr/cours/img/icone-fichier.png" class="icone-fichier"> <strong>index.html</strong> <br><br>
+	En effet, c'est la première ressource que va rechercher le serveur lorsque vous accéderez à un site web. Gardez à l'esprit que si vous souhaitez créer une page d'accueil il faudra appeler le fichier <img src="https://www.eprojet.fr/cours/img/icone-fichier.png" class="icone-fichier"> <strong>index.html</strong> <br><br>
+</p><div class="conteneur-bouton"><a href="https://www.eprojet.fr/cours/html_css/03-html_css-structure-d--un-fichier-css" title=" Structure D'un Fichier Css" class="boutonChapitre"><span class="pas-important">Allez au chapitre suivant : </span>3.  Structure D'un Fichier Css</a>
+</div>			</div>
+									<div class="colonne-droite">
+				<div class="contenu-colonne-droite">
+					<p class="colonne-titre1">HTML CSS</p>
+					<a href="https://www.eprojet.fr/cours/html_css/01-html_css-introduction-html-css" title=" Introduction Html Css">1.  Introduction Html Css</a>
+<a href="https://www.eprojet.fr/cours/html_css/02-html_css-structure-d--une-page-html" title=" Structure D'une Page Html" class="active">2.  Structure D'une Page Html</a>
+<a href="https://www.eprojet.fr/cours/html_css/03-html_css-structure-d--un-fichier-css" title=" Structure D'un Fichier Css">3.  Structure D'un Fichier Css</a>
+<a href="https://www.eprojet.fr/cours/html_css/04-html_css-les-polices-d--ecriture" title=" Les Polices D'ecriture">4.  Les Polices D'ecriture</a>
+<a href="https://www.eprojet.fr/cours/html_css/05-html_css-les-selecteurs" title=" Les Selecteurs">5.  Les Selecteurs</a>
+<a href="https://www.eprojet.fr/cours/html_css/06-html_css-firebug" title=" Firebug">6.  Firebug</a>
+<a href="https://www.eprojet.fr/cours/html_css/07-html_css-styles-css" title=" Styles Css">7.  Styles Css</a>
+<a href="https://www.eprojet.fr/cours/html_css/08-html_css-l--heritage" title=" L'heritage">8.  L'heritage</a>
+<a href="https://www.eprojet.fr/cours/html_css/09-html_css-les-images" title=" Les Images">9.  Les Images</a>
+<a href="https://www.eprojet.fr/cours/html_css/10-html_css-les-positionnements" title=" Les Positionnements">10.  Les Positionnements</a>
+<a href="https://www.eprojet.fr/cours/html_css/11-html_css-le-zoning" title=" Le Zoning">11.  Le Zoning</a>
+<a href="https://www.eprojet.fr/cours/html_css/12-html_css-les-tableaux" title=" Les Tableaux">12.  Les Tableaux</a>
+<a href="https://www.eprojet.fr/cours/html_css/13-html_css-les-listes" title=" Les Listes">13.  Les Listes</a>
+<a href="https://www.eprojet.fr/cours/html_css/14-html_css-les-liens-et-ancres" title=" Les Liens Et Ancres">14.  Les Liens Et Ancres</a>
+<a href="https://www.eprojet.fr/cours/html_css/15-html_css-menu-de-navigation" title=" Menu De Navigation">15.  Menu De Navigation</a>
+<a href="https://www.eprojet.fr/cours/html_css/16-html_css-les-formulaires" title=" Les Formulaires">16.  Les Formulaires</a>
+<a href="https://www.eprojet.fr/cours/html_css/17-html_css-donnees-multimedia" title=" Donnees Multimedia">17.  Donnees Multimedia</a>
+<a href="https://www.eprojet.fr/cours/html_css/18-html_css-balises-html-et-proprietes-css" title=" Balises Html Et Proprietes Css">18.  Balises Html Et Proprietes Css</a>
+<a href="https://www.eprojet.fr/cours/html_css/19-html_css-cas-pratique" title=" Cas Pratique">19.  Cas Pratique</a>
+<a href="https://www.eprojet.fr/cours/html_css/20-html_css-creation-d--un-site-web" title=" Creation D'un Site Web">20.  Creation D'un Site Web</a>
+					<div class="partage">
+						<ul>
+															<li><a rel="nofollow" title="Voir au format PDF" target="blank" href="https://www.eprojet.fr/cours/pdf/html-css-support.pdf"><img src="https://www.eprojet.fr/cours/imgsite/pdf.png"></a></li>
+														<li><a rel="nofollow" class="facebook" title="Partager sur Facebook" onclick="window.open(this.href, 'partage', 'height=400, width=500, top=300, left=300, toolbar=no, menubar=yes, location=no, resizable=yes, scrollbars=no, status=no'); return false; __gaTracker('send', 'event', 'outbound-article', 'https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.eprojet.fr%2FF', 'Facebook');" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.eprojet.fr%2F"><img src="https://www.eprojet.fr/cours/imgsite/facebook.png"></a></li>
+							<li><a rel="nofollow" class="twitter" title="Partager sur Twitter" onclick="window.open(this.href, 'partage', 'height=400, width=500, top=300, left=300, toolbar=no, menubar=yes, location=no, resizable=yes, scrollbars=no, status=no'); return false; __gaTracker('send', 'event', 'outbound-article', 'https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.eprojet.fr%2F&amp;text=Formez+vous+a+votre+rythme+sur+eprojet.fr+!&amp;hashtags=', 'Twitter');" href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.eprojet.fr%2F&amp;text=Formez+vous+a+votre+rythme+sur+eprojet.fr+!&amp;hashtags="><img src="https://www.eprojet.fr/cours/imgsite/twitter.png"></a></li><li><a rel="nofollow" title="Partager sur Google+" onclick="window.open(this.href, 'partage', 'height=400, width=500, top=300, left=300, toolbar=no, menubar=yes, location=no, resizable=yes, scrollbars=no, status=no'); return false; __gaTracker('send', 'event', 'outbound-article', 'https://plus.google.com/share?url=http%3A%2F%2Fwww.eprojet.fr%2F', 'Google+');" href="https://plus.google.com/share?url=http%3A%2F%2Fwww.eprojet.fr%2F"><img src="https://www.eprojet.fr/cours/imgsite/google.png"></a></li>
+							<li><a title="Partager à un ami par email" href="https://www.eprojet.fr/cours/partage.php?contenu=/cours/html-css/02-html_css-structure-d--une-page-html"><img src="https://www.eprojet.fr/cours/imgsite/email.png"></a></li>
+							<li><a title="Déposez un commentaire" href="https://www.eprojet.fr/cours/commentaire.php"><img src="https://www.eprojet.fr/cours/imgsite/commentaire.png"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+						<div class="clear"></div>
+		</div>
+	</section>
+			<footer>
+				<div class="conteneur">
+						2024 - <a href="https://www.eprojet.fr/" title="eProjet.fr">eProjet.fr</a> - 
+						<a href="https://www.eprojet.fr/cours/mentions-legales.php" title="Mentions Légales">Mentions Légales</a> -
+						<a href="https://www.eprojet.fr/cours/commentaire.php" title="Mentions Légales">Commentaire</a> -
+						<a href="https://www.eprojet.fr/cours/qui-sommes-nous.php" title="Qui sommes nous">Qui sommes nous ?</a> -
+						<a href="https://www.eprojet.fr/cours/contact.php" title="contact">Contact</a> -
+						<a href="https://plus.google.com/+EvogueFr/" target="blank">G+</a><br>
+						© Copyright. Aucune reproduction, même partielle (textes, documents, images, etc.), ne peut être faite sans l'accord de son auteur.
+				</div>
+			</footer>
+			<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-75707004-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	</body>
+</html>
